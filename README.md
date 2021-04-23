@@ -16,7 +16,7 @@ kubectl apply -f mongo-express-deployment.yaml
 kubectl apply -f with-external-service/mongo-express-external-service.yaml
 ```
 
-**NOTE: ** In minikube, the service ip is always in a pending state. 
+**NOTE:** In minikube, the service ip is always in a pending state. 
 To open the service in a browser, execute
 
 ```
@@ -40,8 +40,7 @@ kubectl apply -f with-ingress/mongo-express-internal-service.yaml
 kubectl apply -f with-ingress/mongo-express-ingress.yaml
 ```
 
-- The hostname used in the ingress should be configured via DNS to map to the IP of the node
-(TODO: Read up on this later)
+- The hostname used in the ingress should be configured via DNS to map to the IP of the node. Modify the /etc/hosts for local testing and development. Use Route53 to create DNS records in prod. 
 
 - Create ingress controller
 ```
